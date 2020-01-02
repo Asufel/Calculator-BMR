@@ -1,0 +1,135 @@
+@media (max-width:800px) and (orientation: portrait)
+  *
+    body
+      .header
+        .header__clockBoard
+          width: 120px
+          .clockBoard__clock
+            font-size: 12px
+        .header__greetings
+          .greetings__h1
+            top: 40%
+            margin-bottom: 15px
+            font-size: 25px
+          .greetings__h2
+            font-size: 14px
+          .greetings__h4 
+            font-size: 10px
+        .header__icons    
+          .fas
+            font-size: 10px
+        .header__start
+          width: 90vw
+        
+          @keyframes arrowDown
+            0%
+              opacity: 0
+              bottom: -15%
+            10%
+              opacity: 1
+            90%
+              bottom: -50%
+            100%
+              opacity: 0
+              bottom: -50%
+  *
+    body    
+      .wrapper
+        .app__board
+          .board__incorrectData
+            .incorrectData__ul
+              margin-top: 30px
+          .board__form
+            padding: 0
+            .form__row
+              flex-basis: 100%
+              .row__label
+                margin: 0
+              .label__gender
+                width: 80vw
+              .gender
+                margin: 7.5px 0
+              .input__age,.input__weight,.input__tall
+                margin: 12.5px 0
+              .row__bodyType
+                padding: 20px 0
+                width: 100vw
+                .bodyType__photo
+                  margin-left: calc(50% - 100px)
+                  margin-bottom: 40px
+                .bodyType__h2
+                  margin-top: 240px
+              .row__showResult
+                width: 90vw 
+        .app__result
+          .result__score,.result__fullScore
+            width: 80vw
+          .result__scoreDescription
+            width: 90vw
+
+@media (max-width:900px) and (orientation: landscape)
+  *
+    body
+      .header
+        .header__clockBoard
+          width: 150px
+          height: 50px
+          .clockBoard__clock
+            font-size: 12px
+            line-height: 50px
+        .header__greetings
+          .greetings__h1
+            top: 40%
+            margin-bottom: 15px
+            font-size: 25px
+          .greetings__h2
+            font-size: 14px
+          .greetings__h4 
+            font-size: 10px
+        .header__icons    
+          .fas
+            font-size: 10px
+        .header__start
+          width: 60vw
+          height: 50px
+          line-height: 50px
+          bottom: 2%
+  *  
+    body   
+      .wrapper
+        .app__board
+          .board__form
+            .form__row
+              width: 95vw
+              .row__label
+                .label__gender
+                  width: 80vw
+                  margin-bottom: 15px
+              .row__bodyType
+                .bodyType__photo
+                  margin-left: calc(50% - 100px)  
+                .bodyType__h2
+                  margin-top: 220px       
+        .app__result
+          .result__score,.result__fullScore
+            width: 60vw
+            font-size: 30px
+          .result__scoreDescription
+            width: 90vw
+
+@media (min-width:1440px)
+  *
+    body
+      .wrapper
+        .app__board
+          .board__form
+            padding: 0
+            .form__row
+              flex-basis: 100%
+              &.types
+                align-items: flex-start
+              .row__bodyType
+                padding: 20px 0
+                width: 100vw
+                min-height: 0px
+          

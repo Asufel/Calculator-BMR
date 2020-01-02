@@ -1,0 +1,253 @@
+*    
+  body
+    .wrapper
+      display: none
+      max-width: 2200px
+      margin: 0 auto
+      &.active
+        display: block
+      .app__board,.app__result
+        background-color: rgb(0,0,0)
+      .app__board
+        padding: 40px 10px
+        .board__incorrectData
+          position: fixed
+          top: -100%
+          left: 0
+          right: 0
+          box-shadow: 0 0 7px 3px #E0881A
+          background-color: #E0881A
+          padding: 20px
+          transition: 1s 1s ease
+          &.active
+            top: 0%
+          .incorrectData__h1
+            margin: 5px 0
+            text-align: center
+            color: black
+          .incorrectData__p
+            text-align: center
+            margin-bottom: 10px
+            color: black
+          .incorrectData__ul
+            list-style: square
+            width: 70%
+            color: black
+            margin: 0 auto
+          .board__closePop
+            position: absolute
+            width: 30px
+            height: 30px
+            text-align: center
+            line-height: 30px
+            border-radius: 50%
+            color: black
+            bottom: 5%
+            right: 2%
+            cursor: pointer
+        .board__form
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          justify-content: space-around
+          margin: 0 auto
+          padding: 20px
+          .form__row
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-around
+            align-items: center
+            margin: 10px 0
+            width: 70vw
+            align-items: center
+            &.progress_bar
+              justify-content: flex-start
+              margin: 20px auto
+            .row__label
+              text-align: center
+              font-size: 16px
+              box-shadow: 0 0 0px 0px orange
+              border-radius: 20px
+              padding: 15px
+              color: #E0881A
+              box-sizing: content-box
+              &.sex
+                animation: showLabel 0.5s 1.2s 1 ease both
+              &.age
+                animation: showLabel 0.5s 1.7s 1 ease both
+              &.weight
+                animation: showLabel 0.5s 2.2s 1 ease both
+              &.tall
+                animation: showLabel 0.5s 2.7s 1 ease both
+              &.type
+                animation: showLabel 0.5s 3.1s 1 ease both
+                border-radius: 50px
+                width: 90vw
+                line-height: 55px
+            .gender
+              display: block
+              padding: 5px 15px
+              width: 100px
+              height: 70px
+              line-height: 70px
+              text-align: center
+              border-radius: 20px
+              text-decoration: none
+              text-transform: uppercase
+              color: #E0881A
+              transition: .4s linear
+              letter-spacing: 2px
+              font-weight: bold
+              box-sizing: content-box
+              font-size: 12px
+              &.active
+                background-color: #E0881A
+                color: black
+            input
+              width: 120px
+              height: 40px
+              text-align: center
+              border: none
+              border-radius: 20px
+              margin-left: 0px
+              background-color: transparent
+              color: orange
+              box-shadow: 0 0 3px 1px orange
+              &:focus               
+                outline: 0
+                box-shadow: 0 0 7px 4px orange
+            .row__bodyType
+              flex-basis: 100%
+              min-height: 300px
+              max-width: 700px
+              margin: 30px auto
+              padding: 20px
+              &.clearfix::after
+                display: block
+                content: ''
+                clear: both
+              .bodyType__photo
+                height: 200px
+                width: 200px
+                float: left
+                margin: 0 20px 20px 0
+                cursor: pointer
+                border-radius: 20px
+                box-shadow: 0 0 0px 0px orange
+                &.active
+                  box-shadow: 0 0 12px 12px orange
+              .bodyType__h2
+                text-align: center
+                color: orange
+                letter-spacing: 2px
+              .bodyType__description  
+                padding: 20px
+                text-indent: 10px
+                text-align-last: right
+                color: gray
+            .bar   
+              width: 0%
+              height: 50px
+              background-color: #E0881A
+              opacity: 1
+              transition: 1s ease
+              color: black
+              border-radius: 10px
+              text-align: center
+              line-height: 50px
+              &.loading
+                animation: load 2s 1 linear both
+                opacity: 1
+              &.disappear
+                animation: disappear 1.5s 1 linear both
+            .row__showResult
+              width: 350px
+              height: 60px
+              line-height: 60px
+              border-radius: 40px
+              border: none
+              color: #E0881A
+              background-color: transparent
+              box-shadow: 0 0 7px 3px #E0881A
+              cursor: pointer
+              text-transform: uppercase
+              transition: .4s linear
+              letter-spacing: 2px
+              font-weight: bold
+              &:hover
+                background-color: #E0881A
+                color: black
+
+              
+        @keyframes load
+          0%
+            width: 0%
+          25%
+            width: 10%
+          50%
+            width: 50%
+          60%
+            width: 60%
+          75%
+            width: 88%
+          100%
+            width: 100%
+          
+        @keyframes disappear
+          0%
+            height: 50px
+          100%
+            height: 0px
+                
+        @keyframes showLabel
+          0%
+            box-shadow: 0 0 0px 0px #E0881A
+          10%
+            box-shadow: 0 0 5px 5px #E0881A
+          50%
+            box-shadow: 0 0 10px 10px #E0881A
+          90%
+            box-shadow: 0 0 5px 5px #E0881A
+          100%
+            box-shadow: 0 0 0px 0px #E0881A
+              
+      .app__result
+        display: none
+        padding: 40px 10px
+        &.active
+          display: block
+        .result__score,.result__fullScore
+          text-align: center
+          font-size: 35px
+          height: 20vh
+          line-height: 20vh
+          background-color: #E0881A
+          color: black
+          border-radius: 40px
+          width: 40vw
+        .result__score
+          margin: 0 auto 30px
+        .result__fullScore
+          margin: 30px auto 30px
+        .result__scoreDescription
+          width: 60vw
+          margin: 0 auto
+          text-align: center
+          padding: 20px 10px
+          opacity: 0
+          transition: 2.5s ease
+          color: gray
+          &.active
+            opacity: 1
+          
+      footer
+        background-color: #E0881A
+        padding: 40px 0
+        display: flex
+        justify-content: center
+        .sign
+          display: flex
+          justify-content: flex-end
+          align-items: center
+          p
+            font-size: 10px
