@@ -1,227 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>QuickCaloryCounter</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Permanent+Marker|Roboto+Condensed&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://kit.fontawesome.com/4fdff43c6c.js"></script>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="header__clockBoard">
-        <span class="clockBoard__clock"></span>
-      </div>
-      <div class="header__icons">
-        <i class="fas fa-calculator one"></i>
-        <i class="fas fa-balance-scale-right"></i>
-        <i class="fas fa-tint"></i>
-        <i class="fas fa-dumbbell"></i>
-      </div>
-      <div class="header__greetings">
-        <h1 class="greetings__h1">Witaj!</h1>
-        <h2 class="greetings__h2">
-          chcesz poznać swoje zapotrzebowanie kaloryczne i nie wiesz jak się do
-          tego zabrać?
-        </h2>
-        <h4 class="greetings__h4">
-          Nic prostszego! Nasz kalkulator Ci pomoże!
-        </h4>
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <button class="header__start">Start</button>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>QuickCaloryCounter</title>
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Permanent+Marker|Roboto+Condensed&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/4fdff43c6c.js"></script>
+</head>
 
-    <div class="wrapper">
-      <section class="app__board">
-        <aside class="board__incorrectData">
-          <h1 class="incorrectData__h1">Błąd</h1>
-          <p class="incorrectData__p">Upewnij się, że:</p>
-          <ul class="incorrectData__ul">
-            <li>- wybrałeś płeć</li>
-            <li>- wprowadziłeś prawidłowy wiek</li>
-            <li>- wprowadzona masa ciała jest prawidłowa</li>
-            <li>- został wybrany typ sylwetki</li>
-          </ul>
-          <div class="board__closePop">X</div>
-        </aside>
-        <form action="" class="board__form">
-          <div class="form__row">
-            <label for="gender" class="row__label label__gender sex"
-              >Twoja płeć</label
-            >
-            <a href="" class="gender" data-section="woman">kobieta</a>
-            <a href="" class="gender" data-section="man">mężczyzna</a>
-          </div>
-          <div class="form__row">
-            <label for="age" class="row__label age"> Twój wiek</label>
-            <input type="number" class="input__age" placeholder="0" />
-          </div>
-          <div class="form__row">
-            <label for="age" class="row__label weight"> Twoja waga</label>
-            <input type="number" class="input__weight" placeholder="kg" />
-          </div>
-          <div class="form__row">
-            <label for="age" class="row__label tall"> Twój wzrost</label>
-            <input type="number" class="input__tall" placeholder="cm" />
-          </div>
-          <div class="form__row types">
-            <label for="bodyType" class="row__label type"
-              >Wybierz swój typ budowy sylwetki</label
-            >
-            <div class="row__bodyType clearfix">
-              <img
-                class="bodyType__photo"
-                data-section="ekto"
-                src="./img/ecto.jpg"
-                alt="kobieta i mężczyzna"
-              />
-              <h2 class="bodyType__h2">Ektomorfik</h2>
-              <p class="bodyType__description">
-                Ektomorfik jest z natury szczupły, a czasami wręcz chudy, przez
-                co dosyć łatwo odróżnić go od endomorfika i mezomorfika. Ma
-                wąskie barki i biodra, a jego klatka piersiowa jest stosunkowo
-                wąska i płaska. Twarz i szyja są smukłe i wydłużone, a postawa
-                jest raczej przygarbiona, co wynika ze słabego napięcia mięśni
-                odpowiadających za prostą postawę. Celem ektomorfika będzie
-                zwiększenie masy ciała, aby budowa ciała była bardziej
-                proporcjonalna. Szczególne wyzwanie stanowić będzie zwiększenie
-                muskulatury.
-              </p>
-              <p class="bodyType__description">
-                Ektomorfik charakteryzuje się szybką przemianą materii, co może
-                być postrzegane, jako atut, ponieważ istnieje niewielkie ryzyko
-                odłożenia nadmiaru kalorii w postaci tkanki tłuszczowej. Z
-                drugiej strony wysokie zapotrzebowanie kaloryczne powoduje
-                trudności z przyrostem masy mięśniowej, ponieważ tkanka
-                mięśniowa bardzo szybko zużywa zapas energetyczny w postaci
-                węglowodanów i zaczyna spalać białka, z których jest zbudowana.
-                Z tego powodu „utrzymanie” mięśni może stanowić problem.
-              </p>
-            </div>
-            <div class="row__bodyType clearfix">
-              <img
-                class="bodyType__photo"
-                data-section="mezo"
-                src="./img/mezo.jpg"
-                alt="kobieta i mężczyzna"
-              />
-              <h2 class="bodyType__h2">Mezomorfik</h2>
-              <p class="bodyType__description">
-                Budowa ciała mezomorfika jest wyjątkowo korzystna.
-                Charakteryzuje się wąskimi biodrami i szerokimi barkami
-                stanowiącymi bardzo dobrą podstawę do budowania proporcjonalnej,
-                sportowej sylwetki. W dużym uproszczeniu budowa ciała przypomina
-                prostokąt. Mezomorfik nie może narzekać również na ilość masy
-                mięśniowej, ponieważ nie ma większych problemów z jej
-                budowaniem, co przy stosunkowo niewielkim wysiłku czyni go
-                urodzonym sportowcem o atletycznej budowie. Sylwetka ze względu
-                na odpowiednie napięcie mięśni jest wyprostowana. Co więcej
-                poziom testosteronu i hormonu wzrostu u tych osób jest zwykle w
-                normie, co stwarza idealne warunki do doskonalenia sylwetki.
-              </p>
-              <p class="bodyType__description">
-                Metabolizm mezomorfika określany jest, jako optymalny. Dzięki
-                temu nie ma większego problemu z utrzymaniem tkanki mięśniowej,
-                a równocześnie nie ma większego ryzyka, że nadmiar kalorii
-                zostanie odłożony w tkance tłuszczowej. Zapotrzebowanie
-                kaloryczne ustala się w zgodzie z trybem życia biorąc pod uwagę
-                ilość i intensywność treningów.. Unormowany metabolizm oznacza
-                również szybką regenerację po treningu. Odbudowa mikrouszkodzeń
-                następuje bardzo szybko, dzięki czemu osoba o typie budowy
-                mezomorficznej może pozwolić sobie na częste i intensywne
-                treningi skutkujące szybkimi i zadowalającymi rezultatami.
-              </p>
-            </div>
-            <div class="row__bodyType clearfix">
-              <img
-                class="bodyType__photo"
-                data-section="endo"
-                src="./img/endo.jpg"
-                alt="kobieta i mężczyzna"
-              />
-              <h2 class="bodyType__h2">Endomorfik</h2>
-              <p class="bodyType__description">
-                Budowa ciała endomorfika charakteryzuje się masywną budową ciała
-                oraz grubymi kościami. Poprzez spowolniony metabolizm
-                endomorficy mają skłonności do tycia. Osoby posiadające ten typ
-                budowy posiadają tendencje do gromadzenia się tkanki tłuszczowej
-                w okolicach brzucha, co w konsekwencji może przyczynić się w
-                przyszłości do takich chorób jak cukrzyca, zespół metaboliczny
-                oraz różnych problemów sercowych. Aby zoptymalizować efekty
-                diety edomorfika należy skupić się na prawidłowym doborze
-                makroskładników.
-              </p>
-              <p class="bodyType__description">
-                Dieta powinna zawierać dużą ilość białka, sięgającą nawet do 50
-                procent, niską ilość węglowodanów i umiarkowaną ilość zdrowych
-                tłuszczy. Osoby o budowie endomorficznej powinni bardziej niż
-                inni uważać na ilość i jakość kalorii w diecie, ponieważ
-                posiadają duże skłonności do odkładania tkanki tłuszczowej.
-                Picie dużej ilości wody i spożywanie częściej mniejszych
-                posiłków może wpłynąć na delikatne przyspieszenie metabolizmu.
-              </p>
-            </div>
-          </div>
-          <div class="form__row progress_bar">
-            <div class="bar"></div>
-          </div>
-          <div class="form__row">
-            <button class="row__showResult">Wynik</button>
-          </div>
-        </form>
-      </section>
-
-      <section class="app__result">
-        <h1 class="result__score"></h1>
-        <p class="result__scoreDescription">
-          To jest Twoje zapotrzebowanie kaloryczne. Należy pamiętać, że jest to
-          wartość przybliżona. Wynik został obliczony na podstawie Twojego
-          <strong>BMR</strong> (Basal Metabolic Rate, BMR) - wskaźnika
-          podstawowej przemiany materii jest on minimalnym dziennym
-          zapotrzebowaniem energetycznym koniecznym do podtrzymania podstawowych
-          procesów życiowych ciała w spoczynku.
-        </p>
-        <h1 class="result__fullScore"></h1>
-        <p class="result__scoreDescription">
-          Dodatkowo dla każdego somatotypu sylwetki należy doliczyć wartość
-          <strong>NEAT</strong> (Non-Exercise Activity Thermogenesis) NEAT, to
-          nic innego jak spontaniczna aktywność fizyczna niezwiązana z
-          treningiem. Pod pojęciem NEAT kryje się wiele składowych, których
-          ludzie często nie zauważają. Zarówno liczba przebytych kilometrów,
-          czyli popularnego dzisiaj liczenia kroków będzie jedną z nich. Jednak
-          często zapominanymi składowymi są tak mało zauważalne oraz zupełnie
-          niekontrolowane ruchy, jak chociażby: tupanie, gestykulacja podczas
-          rozmowy, wiercenie się czy zmiany pozycji. To wszystko wpływa na
-          kreowane wydatki energetyczne związane z NEAT’em.
-        </p>
-        <p class="result__scoreDescription">
-          Należy pamiętać, że każdy organizm jest inny! Podane przez kalkulator
-          kalorii wartości mają charakter orientacyjny i pomocniczy. Żadne
-          narzędzie nie zastąpi konsultacji ze specjalistą! Zamieszczone
-          informacje nie mogą być podstawą do przeprowadzenia samodiagnozy czy
-          leczenia.
-        </p>
-      </section>
-
-      <footer>
-        <div class="sign">
-          <p>Calculator- BMR - Paweł Leszko &copy 2019</p>
-        </div>
-      </footer>
+<body>
+  <header class="header">
+    <div class="header__clockBoard">
+      <span class="clockBoard__clock"></span>
     </div>
+    <div class="header__icons">
+      <i class="fas fa-calculator one"></i>
+      <i class="fas fa-balance-scale-right"></i>
+      <i class="fas fa-tint"></i>
+      <i class="fas fa-dumbbell"></i>
+    </div>
+    <div class="header__greetings">
+      <h1 class="greetings__h1">Witaj!</h1>
+      <h2 class="greetings__h2">
+        chcesz poznać swoje zapotrzebowanie kaloryczne?
+      </h2>
+      <h4 class="greetings__h4">
+        Nic prostszego! Nasz kalkulator Ci pomoże!
+      </h4>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <button class="header__start">Start</button>
+  </header>
 
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+  <div class="wrapper">
+    <section class="app__board">
+      <aside class="board__incorrectData">
+        <h1 class="incorrectData__h1">Błąd</h1>
+        <p class="incorrectData__p">Upewnij się, że:</p>
+        <ul class="incorrectData__ul">
+          <li>- wybrałeś płeć</li>
+          <li>- wprowadziłeś prawidłowy wiek</li>
+          <li>- wprowadzona masa ciała jest prawidłowa</li>
+          <li>- został wybrany typ sylwetki</li>
+        </ul>
+        <div class="board__closePop">X</div>
+      </aside>
+      <form action="" class="board__form">
+        <div class="form__row">
+          <label for="gender" class="row__label label__gender sex">Twoja płeć</label>
+          <a href="" class="gender" data-section="woman">kobieta</a>
+          <a href="" class="gender" data-section="man">mężczyzna</a>
+        </div>
+        <div class="form__row">
+          <label for="age" class="row__label age"> Twój wiek</label>
+          <input type="number" class="input__age" placeholder="0" />
+        </div>
+        <div class="form__row">
+          <label for="age" class="row__label weight"> Twoja waga</label>
+          <input type="number" class="input__weight" placeholder="kg" />
+        </div>
+        <div class="form__row">
+          <label for="age" class="row__label tall"> Twój wzrost</label>
+          <input type="number" class="input__tall" placeholder="cm" />
+        </div>
+        <div class="form__row types">
+          <label for="bodyType" class="row__label type">Wybierz swój typ budowy sylwetki</label>
+          <div class="row__bodyType clearfix">
+            <img class="bodyType__photo" data-section="ekto" src="./img/ecto.jpg" alt="kobieta i mężczyzna" />
+            <h2 class="bodyType__h2">Ektomorfik</h2>
+            <p class="bodyType__description">
+              Ektomorfik jest z natury szczupły, a czasami wręcz chudy, przez
+              co dosyć łatwo odróżnić go od endomorfika i mezomorfika. Ma
+              wąskie barki i biodra, a jego klatka piersiowa jest stosunkowo
+              wąska i płaska. Twarz i szyja są smukłe i wydłużone, a postawa
+              jest raczej przygarbiona, co wynika ze słabego napięcia mięśni
+              odpowiadających za prostą postawę. Celem ektomorfika będzie
+              zwiększenie masy ciała, aby budowa ciała była bardziej
+              proporcjonalna. Szczególne wyzwanie stanowić będzie zwiększenie
+              muskulatury.
+            </p>
+            <p class="bodyType__description">
+              Ektomorfik charakteryzuje się szybką przemianą materii, co może
+              być postrzegane, jako atut, ponieważ istnieje niewielkie ryzyko
+              odłożenia nadmiaru kalorii w postaci tkanki tłuszczowej. Z
+              drugiej strony wysokie zapotrzebowanie kaloryczne powoduje
+              trudności z przyrostem masy mięśniowej, ponieważ tkanka
+              mięśniowa bardzo szybko zużywa zapas energetyczny w postaci
+              węglowodanów i zaczyna spalać białka, z których jest zbudowana.
+              Z tego powodu „utrzymanie” mięśni może stanowić problem.
+            </p>
+          </div>
+          <div class="row__bodyType clearfix">
+            <img class="bodyType__photo" data-section="mezo" src="./img/mezo.jpg" alt="kobieta i mężczyzna" />
+            <h2 class="bodyType__h2">Mezomorfik</h2>
+            <p class="bodyType__description">
+              Budowa ciała mezomorfika jest wyjątkowo korzystna.
+              Charakteryzuje się wąskimi biodrami i szerokimi barkami
+              stanowiącymi bardzo dobrą podstawę do budowania proporcjonalnej,
+              sportowej sylwetki. W dużym uproszczeniu budowa ciała przypomina
+              prostokąt. Mezomorfik nie może narzekać również na ilość masy
+              mięśniowej, ponieważ nie ma większych problemów z jej
+              budowaniem, co przy stosunkowo niewielkim wysiłku czyni go
+              urodzonym sportowcem o atletycznej budowie. Sylwetka ze względu
+              na odpowiednie napięcie mięśni jest wyprostowana. Co więcej
+              poziom testosteronu i hormonu wzrostu u tych osób jest zwykle w
+              normie, co stwarza idealne warunki do doskonalenia sylwetki.
+            </p>
+            <p class="bodyType__description">
+              Metabolizm mezomorfika określany jest, jako optymalny. Dzięki
+              temu nie ma większego problemu z utrzymaniem tkanki mięśniowej,
+              a równocześnie nie ma większego ryzyka, że nadmiar kalorii
+              zostanie odłożony w tkance tłuszczowej. Zapotrzebowanie
+              kaloryczne ustala się w zgodzie z trybem życia biorąc pod uwagę
+              ilość i intensywność treningów.. Unormowany metabolizm oznacza
+              również szybką regenerację po treningu. Odbudowa mikrouszkodzeń
+              następuje bardzo szybko, dzięki czemu osoba o typie budowy
+              mezomorficznej może pozwolić sobie na częste i intensywne
+              treningi skutkujące szybkimi i zadowalającymi rezultatami.
+            </p>
+          </div>
+          <div class="row__bodyType clearfix">
+            <img class="bodyType__photo" data-section="endo" src="./img/endo.jpg" alt="kobieta i mężczyzna" />
+            <h2 class="bodyType__h2">Endomorfik</h2>
+            <p class="bodyType__description">
+              Budowa ciała endomorfika charakteryzuje się masywną budową ciała
+              oraz grubymi kościami. Poprzez spowolniony metabolizm
+              endomorficy mają skłonności do tycia. Osoby posiadające ten typ
+              budowy posiadają tendencje do gromadzenia się tkanki tłuszczowej
+              w okolicach brzucha, co w konsekwencji może przyczynić się w
+              przyszłości do takich chorób jak cukrzyca, zespół metaboliczny
+              oraz różnych problemów sercowych. Aby zoptymalizować efekty
+              diety edomorfika należy skupić się na prawidłowym doborze
+              makroskładników.
+            </p>
+            <p class="bodyType__description">
+              Dieta powinna zawierać dużą ilość białka, sięgającą nawet do 50
+              procent, niską ilość węglowodanów i umiarkowaną ilość zdrowych
+              tłuszczy. Osoby o budowie endomorficznej powinni bardziej niż
+              inni uważać na ilość i jakość kalorii w diecie, ponieważ
+              posiadają duże skłonności do odkładania tkanki tłuszczowej.
+              Picie dużej ilości wody i spożywanie częściej mniejszych
+              posiłków może wpłynąć na delikatne przyspieszenie metabolizmu.
+            </p>
+          </div>
+        </div>
+        <div class="form__row progress_bar">
+          <div class="bar"></div>
+        </div>
+        <div class="form__row">
+          <button class="row__showResult">Wynik</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="app__result">
+      <h1 class="result__score"></h1>
+      <p class="result__scoreDescription">
+        To jest Twoje zapotrzebowanie kaloryczne. Należy pamiętać, że jest to
+        wartość przybliżona. Wynik został obliczony na podstawie Twojego
+        <strong>BMR</strong> (Basal Metabolic Rate, BMR) - wskaźnika
+        podstawowej przemiany materii jest on minimalnym dziennym
+        zapotrzebowaniem energetycznym koniecznym do podtrzymania podstawowych
+        procesów życiowych ciała w spoczynku.
+      </p>
+      <h1 class="result__fullScore"></h1>
+      <p class="result__scoreDescription">
+        Dodatkowo dla każdego somatotypu sylwetki należy doliczyć wartość
+        <strong>NEAT</strong> (Non-Exercise Activity Thermogenesis) NEAT, to
+        nic innego jak spontaniczna aktywność fizyczna niezwiązana z
+        treningiem. Pod pojęciem NEAT kryje się wiele składowych, których
+        ludzie często nie zauważają. Zarówno liczba przebytych kilometrów,
+        czyli popularnego dzisiaj liczenia kroków będzie jedną z nich. Jednak
+        często zapominanymi składowymi są tak mało zauważalne oraz zupełnie
+        niekontrolowane ruchy, jak chociażby: tupanie, gestykulacja podczas
+        rozmowy, wiercenie się czy zmiany pozycji. To wszystko wpływa na
+        kreowane wydatki energetyczne związane z NEAT’em.
+      </p>
+      <p class="result__scoreDescription">
+        Należy pamiętać, że każdy organizm jest inny! Podane przez kalkulator
+        kalorii wartości mają charakter orientacyjny i pomocniczy. Żadne
+        narzędzie nie zastąpi konsultacji ze specjalistą! Zamieszczone
+        informacje nie mogą być podstawą do przeprowadzenia samodiagnozy czy
+        leczenia. Kalkulator nie uwzględnia dodatkowej aktywności sportowej poza wporwadzonymi danymi.
+      </p>
+      <p class="result__scoreDescription">
+        <a href="https://www.ahajournals.org/doi/full/10.1161/01.atv.0000205848.83210.73">Link do badań </a>
+      </p>
+    </section>
+
+    <footer>
+      <div class="sign">
+        <p>Calculator- BMR - Paweł Leszko &copy 2019</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

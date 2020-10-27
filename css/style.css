@@ -459,6 +459,7 @@
 
 * body .wrapper .app__board .board__form .form__row .row__bodyType .bodyType__description {
   padding: 20px;
+  font-size: 15px;
   text-indent: 10px;
   text-align-last: right;
   color: gray;
@@ -648,6 +649,7 @@
 * body .wrapper .app__result .result__scoreDescription {
   width: 60vw;
   margin: 0 auto;
+  font-size: 15px;
   text-align: center;
   padding: 20px 10px;
   opacity: 0;
@@ -658,6 +660,10 @@
 
 * body .wrapper .app__result .result__scoreDescription.active {
   opacity: 1;
+}
+
+* body .wrapper .app__result .result__scoreDescription a {
+  color: goldenrod;
 }
 
 * body .wrapper footer {

@@ -1,4 +1,4 @@
-*    
+*
   body
     .wrapper
       display: none
@@ -113,7 +113,7 @@
               background-color: transparent
               color: orange
               box-shadow: 0 0 3px 1px orange
-              &:focus               
+              &:focus
                 outline: 0
                 box-shadow: 0 0 7px 4px orange
             .row__bodyType
@@ -140,12 +140,13 @@
                 text-align: center
                 color: orange
                 letter-spacing: 2px
-              .bodyType__description  
+              .bodyType__description
                 padding: 20px
+                font-size: 15px
                 text-indent: 10px
                 text-align-last: right
                 color: gray
-            .bar   
+            .bar
               width: 0%
               height: 50px
               background-color: #E0881A
@@ -178,7 +179,6 @@
                 background-color: #E0881A
                 color: black
 
-              
         @keyframes load
           0%
             width: 0%
@@ -192,13 +192,13 @@
             width: 88%
           100%
             width: 100%
-          
+
         @keyframes disappear
           0%
             height: 50px
           100%
             height: 0px
-                
+
         @keyframes showLabel
           0%
             box-shadow: 0 0 0px 0px #E0881A
@@ -210,7 +210,7 @@
             box-shadow: 0 0 5px 5px #E0881A
           100%
             box-shadow: 0 0 0px 0px #E0881A
-              
+
       .app__result
         display: none
         padding: 40px 10px
@@ -232,6 +232,7 @@
         .result__scoreDescription
           width: 60vw
           margin: 0 auto
+          font-size: 15px
           text-align: center
           padding: 20px 10px
           opacity: 0
@@ -239,7 +240,9 @@
           color: gray
           &.active
             opacity: 1
-          
+          a
+            color: goldenrod
+
       footer
         background-color: #E0881A
         padding: 40px 0
